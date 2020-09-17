@@ -20,7 +20,7 @@ cd darknet
 ### Configuration
 
 To run the detector, you need to compile [Darknet](https://github.com/AlexeyAB/darknet) on your pc to build a library libdarknet.so.
-See the [instructions](https://github.com/gmurro/darknet/INSTRUCTIONS.md) to compile Darknet.
+See the [instructions](https://github.com/gmurro/darknet/blob/master/INSTRUCTIONS.md) to compile Darknet.
 
 After doing this, copy on 'darknet' folder the library libdarknet.so.
 In the same directory there are also: 
@@ -31,7 +31,7 @@ In the same directory there are also:
     * COCO DATASET: yolov4-tiny.weights
     * VISDRONE-2019 DATASET: yolov3tiny.weights
         
-Inside the [darknet.py](https://github.com/gmurro/darknet/darknet.py) file you can set within the global variables the path of the weights, libdarknet.so and configuration files to use :  
+Inside the [darknet.py](https://github.com/gmurro/darknet/blob/master/darknet.py) file you can set within the global variables the path of the weights, libdarknet.so and configuration files to use :  
 ```python
 LIBDARKNET = os.path.dirname(os.path.realpath(__file__)) + "/libdarknet.so"
 CFG_FILE = os.path.dirname(os.path.realpath(__file__)) + "/cfg/yolov4-tiny.cfg"
@@ -40,7 +40,7 @@ NAMES_FILE = os.path.dirname(os.path.realpath(__file__)) + "/cfg/coco.names"
 WEIGHTS_FILE = os.path.dirname(os.path.realpath(__file__)) + "/yolov4-tiny.weights"
 ```
 
-The script will detect object within the images saved in "[frame](https://github.com/gmurro/darknet/frame)" folder.
+The script will detect object within the images saved in "[frame](https://github.com/gmurro/darknet/tree/master/frame)" folder.
 You can replace them with others images on witch you want perform detection.
 
 ## Run
