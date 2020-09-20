@@ -2,6 +2,7 @@
 
 Custom implementation of Yolo in Python among Darknet framework.
 The module was written based on original available [here](https://github.com/AlexeyAB/darknet/blob/master/darknet.py).
+It was developed during my bachelor’s thesis entitled "Design, development and integration of a crowd detection software module into a remote-controlled system".
 
 ## Prerequisites
 
