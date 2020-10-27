@@ -53,6 +53,8 @@
     print(cv2.__version__)
     ```
     and you can show path of install with "locate opencv")
+    
+#### **1.1 Install Nvidia Driver, CUDA & CUDNN**
 
 - NVIDIA DRIVER (CMD Terminal)
 
