@@ -110,12 +110,28 @@
     ```
 ### **2. Compile darknet**
 
-- DARKNET ([git repository](https://github.com/AlexeyAB/darknet))
+> DARKNET ([git repository](https://github.com/AlexeyAB/darknet))
+
+ - Compile darknet with CPU
 
     ```console
     git clone https://github.com/AlexeyAB/darknet.git
     cd darknet
-    nano Makefile (Change the following parameters, se sono necessari:
+    nano Makefile (Change the following parameters:
+        - GPU=0 to build with CUDA to accelerate by using GPU (CUDA should be in /usr/local/cuda)
+        - CUDNN=0 to build with cuDNN v5-v7 to accelerate training by using GPU (cuDNN should be in /usr/local/cudnn)
+        - OPENCV=1 to build with OpenCV 4.x/3.x/2.4.x - allows to detect on video files and video streams from network cameras or web-cams
+        - LIBSO=1 to build a library darknet.so and binary runable file uselib that uses this library
+    )
+    make
+    ```
+    
+ - Compile darknet with GPU
+
+    ```console
+    git clone https://github.com/AlexeyAB/darknet.git
+    cd darknet
+    nano Makefile (Change the following parameters:
         - GPU=1 to build with CUDA to accelerate by using GPU (CUDA should be in /usr/local/cuda)
         - CUDNN=1 to build with cuDNN v5-v7 to accelerate training by using GPU (cuDNN should be in /usr/local/cudnn)
         - OPENCV=1 to build with OpenCV 4.x/3.x/2.4.x - allows to detect on video files and video streams from network cameras or web-cams
@@ -124,6 +140,8 @@
     make
     ```
     (if give error `cannot find -lcuda`, search "libcuda.so" and copy it into "/usr/local/cuda-10.0/lib64")
+   
+   In both cases in `darknet` folder you can see the file `libdarknet.so`, that you must copy in python folder.
 
 ### **3. Run darknet**
 - Try to run:
