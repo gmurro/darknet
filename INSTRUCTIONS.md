@@ -56,6 +56,8 @@
     
 #### **1.1 Install Nvidia Driver, CUDA & CUDNN**
 
+(If you are using WSL2, follow this [tutorial](https://docs.nvidia.com/cuda/wsl-user-guide/index.html) and then jump to install CUDNN 7.6.6)
+
 - NVIDIA DRIVER (CMD Terminal)
 
     ```console
