@@ -88,8 +88,8 @@
     nano ~/.bashrc
     (write at the end:
     #export CUDA
-    export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.0/NsightCompute-1.0${PATH:+:${PATH}}${PATH:+:${PATH}}
-    export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+    export PATH=/usr/local/cuda-10.0/bin:/usr/local/cuda-10.0/NsightCompute-1.0:$PATH
+    export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64:$LD_LIBRARY_PATH
     export CUDADIR=/usr/local/cuda-10.0
     )
     source ~/.bashrc
@@ -104,11 +104,6 @@
     sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.0_amd64.deb 
     sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.0_amd64.deb 
     sudo dpkg -i libcudnn7-doc_7.6.5.32-1+cuda10.0_amd64.deb
-    sudo apt-get install libcupti-dev
-    nano ~/.bashrc
-    (write at end:
-    export LD_LIBRARY_PATH=/usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
-    )
     ```
 ### **2. Compile darknet**
 
